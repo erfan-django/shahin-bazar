@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# بازار شاهین‌شهر 🏪
 
-## Getting Started
+یک بازار محلی آنلاین برای شهر شاهین‌شهر، اصفهان. این پروژه یک پلتفرم فروشگاهی است که فروشندگان محلی (مغنت‌دارها) را به ساکنان شهر متصل می‌کند.
 
-First, run the development server:
+## ویژگی‌ها ✨
+
+- 🏠 **صفحه اصلی** — بنر معرفی، دسته‌بندی محصولات، آخرین کالاها، بخش پیش‌فروش و فروشگاه‌های محلی
+- 🔍 **جستجوی پیشرفته** — جستجوی کالاها بر اساس نام و توضیحات
+- 📂 **دسته‌بندی‌ها** — الکترونیک، پوشاک، خانه و آشپزخانه، کشاورزی و مواد غذایی، زیبایی و سلامت
+- 🏪 **صفحه فروشگاه** — مشاهده مشخصات و کالاهای هر فروشگاه
+- 📦 **صفحه محصول** — قیمت، تخفیف، موجودی، اطلاعات پیش‌فروش و دکمه خرید/پیش‌خرید
+- 👨‍💼 **پنل مدیریت فروشگاه** — آمار، مدیریت کالاها و ثبت کالای جدید
+- 🎨 **حالت شب/روز** — قابلیت تغییر تم تاریک و روشن
+- 🎯 **رنگ دلخواه** — انتخاب رنگ اصلی سایت از پالت رنگی یا انتخاب دلخواه
+- 📱 **طراحی ریسپانسیو** — سازگاری کامل با موبایل، تبلت و دسکتاپ
+- 🔐 **ورود و ثبت‌نام فروشندگان** — سیستم احراز هویت شبیه‌سازی شده
+
+## دسته‌بندی کالاها
+
+| دسته | slug |
+|------|------|
+| الکترونیک | `electronics` |
+| پوشاک | `clothing` |
+| خانه و آشپزخانه | `home` |
+| کشاورزی و مواد غذایی | `agriculture` |
+| زیبایی و سلامت | `beauty` |
+
+## تکنولوژی‌های استفاده شده 🛠️
+
+- **Next.js 16** — فریم‌ورک اصلی
+- **React 19** — کتابخانه UI
+- **Tailwind CSS v4** — استایل‌دهی
+- **lucide-react** — آیکون‌ها
+- **IranSansX** — فونت اختصاصی فارسی
+
+## نکته
+
+این پروژه یک **نمونه اولیه (prototype)** است و از دیتای ایستا (hardcoded) استفاده می‌کند. هیچ فایل Figma یا طراحی UI خارجی برای آن وجود ندارد — تمام طراحی‌ها مستقیم در کد پیاده‌سازی شده‌اند.
+
+## راه‌اندازی
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+مرورگر را در [http://localhost:3000](http://localhost:3000) باز کنید.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## اطلاعات بیشتر
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+این پروژه یک بازار محلی آنلاین برای شهر شاهین‌شهر است که به مغنت‌داران محلی امکان می‌دهد کالاهای خود را به صورت آنلاین به ساکنان شهر عرضه کنند. تمرکز اصلی روی تجربه خرید ساده و بومی‌سازی شده برای کاربران فارسی‌زبان است.
