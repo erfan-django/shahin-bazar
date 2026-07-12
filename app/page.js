@@ -19,14 +19,14 @@ export default function HomePage() {
               نخستین بازار آنلاین تخصصی شهر شاهین شهر - از مغازه‌های محلی خرید کنید یا اجناس خود را برای فروش بگذارید
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="#categories" className="bg-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2" style={{ color: "var(--accent-color)" }}>
+              <a href="#categories" className="bg-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2" style={{ color: "var(--accent-color)" }}>
                 <Store size={18} />
                 دسته‌بندی کالاها
-              </Link>
-              <Link href="#preorder" className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium border border-emerald-400 transition-colors flex items-center gap-2">
+              </a>
+              <a href="#preorder" className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium border border-emerald-400 transition-colors flex items-center gap-2">
                 <Sparkles size={18} />
                 پیش‌فروش‌ها
-              </Link>
+              </a>
             </div>
           </div>
         </div>

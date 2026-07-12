@@ -3,13 +3,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/lib/auth";
-import { LogIn, User, Lock, Eye, EyeOff } from "lucide-react";
+import { LogIn, User, Lock, Eye, EyeOff, UserCheck, Store } from "lucide-react";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
-  const { login } = useAuth();
+  const { login, loginAsTest } = useAuth();
   const router = useRouter();
 
   const handleSubmit = (e) => {
@@ -47,6 +47,16 @@ export default function LoginPage() {
             ورود
           </button>
         </form>
+        <div className="mt-6 space-y-2">
+          <button type="button" onClick={() => { loginAsTest("customer"); router.push("/dashboard/customer"); }} className="w-full py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 border-2" style={{ borderColor: "var(--accent-color)", color: "var(--accent-color)", background: "transparent" }}>
+            <UserCheck size={16} />
+            ورود به عنوان مشتری تستی
+          </button>
+          <button type="button" onClick={() => { loginAsTest("seller"); router.push("/dashboard"); }} className="w-full py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2" style={{ background: "var(--accent-color)", color: "white" }}>
+            <Store size={16} />
+            ورود به عنوان فروشنده تستی
+          </button>
+        </div>
         <p className="text-xs text-center mt-4" style={{ color: "var(--text-secondary)" }}>
           حساب ندارید؟ <Link href="/register" className="hover:underline" style={{ color: "var(--accent-color)" }}>ثبت‌نام کنید</Link>
         </p>
