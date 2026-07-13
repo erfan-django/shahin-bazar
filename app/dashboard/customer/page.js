@@ -27,7 +27,12 @@ export default function CustomerDashboard() {
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
-    if (!user) { router.push("/"); return; }
+    if (!user) {
+      const stored = localStorage.getItem("sb_current_user");
+      if (stored) return;
+      router.push("/");
+      return;
+    }
     const savedOrders = JSON.parse(localStorage.getItem("sb_orders") || "[]").filter(o => o.userId === user.id);
     setOrders(savedOrders);
     const savedWishlist = JSON.parse(localStorage.getItem("sb_wishlist") || "[]").filter(w => w.userId === user.id);

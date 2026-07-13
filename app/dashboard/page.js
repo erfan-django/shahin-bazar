@@ -12,7 +12,11 @@ export default function DashboardPage() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!user) router.push("/login");
+    if (!user) {
+      const stored = localStorage.getItem("sb_current_user");
+      if (stored) return;
+      router.push("/login");
+    }
   }, [user, router]);
 
   if (!user) return null;
