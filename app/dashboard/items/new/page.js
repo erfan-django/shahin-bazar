@@ -11,7 +11,11 @@ export default function NewItemPage() {
   const [form, setForm] = useState({ name: "", price: "", description: "", categoryId: "1", stock: "", isPreOrder: false });
 
   useEffect(() => {
-    if (!user) router.push("/login");
+    if (!user) {
+      const stored = localStorage.getItem("sb_current_user");
+      if (stored) return;
+      router.push("/login");
+    }
   }, [user, router]);
 
   if (!user) return null;
